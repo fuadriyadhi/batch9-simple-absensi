@@ -49,6 +49,12 @@ function renderToHTML() {
 
 //delete function
 function handleDelete(index) {
+  let confirmDelete = confirm('Yakin Mau Dihapus!');
+  if (!confirmDelete) {
+    return;
+  }
+
   absensi_data.splice(index, 1);
+
   renderToHTML();
 }
